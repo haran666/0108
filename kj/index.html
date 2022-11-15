@@ -1,236 +1,80 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-<title>???</title>
-<link href="css/history.css" rel="stylesheet" />
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<title>QQ空间时光轴</title>
 </head>
 <body>
-<!-- ���� ��ʼ -->
-<div class="head-warp">
-  <div class="head">
-        <div class="nav-box">
-          <ul>
-              <li class="cur" style="text-align:center; font-size:62px; font-family:'΢���ź�', '����';">��˾���¼�ʱ����</li>
-          </ul>
-        </div>
-  </div>
+<template>
+<article><i></i>
+	<span class="nular">{{lunar}}</span><b class="secDate">{{date}}</b>
+	<p class="content">"{{content}}"</p>{{img}}
+	<a href="#" title="赞aaa" class="like">（{{like}}人）已赞</a>
+	<a href="#" title="评论" class="comment">（{{comment}}）人已评论</a>
+	<p class="verylike">{{veryLike}}人111觉得很赞</p>
+</article>
+</template>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="menu-nav">
+<div class="container">
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<a class="navbar-brand" href="#"><i class="logo"></i></a>
+	</div>
+	<div class="navbar-collapse collapse">
+
+		<ul class="nav navbar-nav">
+			<li class=" one"><i class="ui-center"></i><a href="#">个人中心</a></li>
+			<li class="two"><i class="ui-home"></i><a href="#">我的主页</a></li>
+			<li class="three"><i class="ui-friends"></i><a href="#">好友</a></li>
+			<li class="four"><i class="ui-apply"></i><a href="#">应用</a></li>
+			<li class="five"><i class="ui-dress"></i><a href="#">装扮</a></li>
+			<li class="six"><i class="ui-music"></i><a href="#" class="music-active"></a></li>
+			<li class="seven"> <input type="text" class="form-control" placeholder="用户/应用/动态"><span class="search"></span></li>
+			<li class="eight"><img src="img/touxiang.png" alt="">&nbsp;&nbsp;用&nbsp;户&nbsp;名&nbsp;~&nbsp;~</li>
+		</ul>
+	</div>
 </div>
-<div class="main">
-  <div class="history">
-    <div class="history-date">
-      <ul>
-      	<h2 class="first"><a href="#nogo">2012��</a></h2>
-
- 
-         <li class="green">
-          <h3>10.08<span>2012</span></h3>
-          <dl>
-            <dt>unm
-	<span>cool</span>
-	</dt>
-          </dl>
-        </li>
-
-       <li>
-         <h3>07.19<span>2012</span></h3>
-          <dl>
-            <dt>���������ں˵�20.0
-	<span>HTML5֧�ֶ�ȫ����ã���?69�֣�����ҳ�棺 </span>
-	</dt>
-          </dl>
-        </li>
-
-         <li>
-          <h3>07.02<span>2012</span></h3>
-          <dl>
-            <dt>���������ں˵�19.0
-	<span>֧����������ͷ���������ֱ�ӷ��������?/span>
-	</dt>
-          </dl>
-        </li>
-
-       <li class="green">
-          <h3>06.27<span>2012</span></h3>
-          <dl>
-            <dt>���������׸�HTML5ʵ����
-	<span>�����ƹ�HTML5</span>
-	</dt>
-          </dl>
-        </li>
-        <li>
-          <h3>06.15<span>2012</span></h3>
-          <dl>
-            <dt>�����������ļ�ǰɨ���������Ӱ�ȫ�ԵĹ���</dt>
-          </dl>
-        </li>
-        <li>
-          <h3>06.05<span>2012</span></h3>
-          <dl>
-            <dt>W3C������ϯִ�йٷû�����վ����360��˾
-	</dt>
-          </dl>
-        </li>
-        <li>
-          <h3>05.12<span>2012</span></h3>
-          <dl>
-            <dt>360������ϯW3C���˳�Ա�������?/dt>
-          </dl>
-        </li>
-        <li>
-          <h3>05.11<span>2012</span></h3>
-          <dl>
-            <dt>���������ں˵�18.0
-	<span>�������û�ʹ��������Ĺ���?/span>
-	</dt>
-          </dl>
-        </li>
-        <li>
-          <h3>05.03<span>2012</span></h3>
-          <dl>
-            <dt>360����������û���ͻ��?000�򣬻�Ծ�û���2000��
-	</dt>
-          </dl>
-        </li>
-        <li>
-          <h3>03.08<span>2012</span></h3>
-          <dl>
-            <dt>���������ں˵�17.0������������ٶȡ���ǿ��ȫ��?
-	<span>����HTTP���߻����������������ҳ�����ٶ�?/span>
-	</dt>
-          </dl>
-        </li>
-        <li>
-          <h3>01.29<span>2012</span></h3>
-          <dl>
-            <dt>�������ȼ���W3C����HTML�����飬����HTML5��׼�ƶ�</span>
-	</dt>
-          </dl>
-        </li>
-      </ul>
-    </div>
-    <div class="history-date">
-      <ul>
-      	<h2 class="date02"><a href="#nogo">2011��</a></h2>
-        <li>
-          <h3>12.12<span>2011</span></h3>
-          <dl>
-            <dt>���������ں˵�16.0������������ٶȡ���ǿ��ȫ��?
-	<span>������360��������֧�֣��������Ͻ��װ�ȫ</span>
-	</dt>
-          </dl>
-        </li>
-        <li class="green">
-          <h3>11.24<span>2011</span></h3>
-          <dl>
-            <dt>���������׸�˫�������ʵ����?
-	<span>���ɲ������������?/span>
-	</dt>
-          </dl>
-        </li>
-        <li>
-          <h3>11.01<span>2011</span></h3>
-          <dl>
-            <dt>���������ں˵�15.0
-	<span>����������ٶȡ���ǿ��ȫ��?/span>
-	</dt>
-          </dl>
-        </li>
-         <li>
-          <h3>10.27<span>2011</span></h3>
-          <dl>
-            <dt>��Ϊ����Ψһ������չ����������̣����?011�ȸ迪�����մ��?
-	</dt>
-          </dl>
-        </li>
-        <li>
-          <h3>09.22<span>2011</span></h3>
-          <dl>
-            <dt>���������ں˵�14.0
-	<span>����Canvas 2D��GPU���ٵ�����</span>
-	</dt>
-          </dl>
-        </li>
-        <li>
-          <h3>09.21<span>2011</span></h3>
-          <dl>
-            <dt>360����������û�����ǧ��������Chromium�����汾ͬ��
-	</dt>
-          </dl>
-        </li>
-        <li>
-          <h3>08.30<span>2011</span></h3>
-          <dl>
-            <dt>���������ں˵�13.0
-	<span>�������ḻ��Ƥ���Զ���֧��</span>
-	</dt>
-          </dl>
-        </li>
-        <li>
-          <h3>06.22<span>2011</span></h3>
-          <dl>
-            <dt>������crx��ʽ�Ĺ���
-	<span>˫��crx�ļ����ɰ�װ��չ��Ƥ��</span>
-	</dt>
-          </dl>
-        </li>
-        <li>
-          <h3>05.19<span>2011</span></h3>
-          <dl>
-            <dt>���������ں˵�10.0
-	<span>����������밲ȫ����������ղؼл�ͨ</span>
-	</dt>
-          </dl>
-        </li>
-        <li>
-          <h3>04.07<span>2011</span></h3>
-          <dl>
-            <dt>�Ƴ�Ӧ�ÿ���ƽ̨���뿪���߹����û���Դ
-	</dt>
-          </dl>
-        </li>
-       <li>
-          <h3>03.27<span>2011</span></h3>
-          <dl>
-            <dt>����360�ư�ȫ��ַ����
-	<span>����IE9����ģʽ��֧��GPUӲ������</span>
-	</dt>
-          </dl>
-        </li>
-      </ul>
-    </div>
-    <div class="history-date">
-      <ul>
-      	<h2 class="date02"><a href="#nogo">2010��</a></h2>
-        <li>
-          <h3>12.13<span>2010</span></h3>
-          <dl>
-            <dt>���������ں˵�7.0<span>����������ٶȡ���ǿ��ȫ��?/span></dt>
-          </dl>
-        </li>
-        <li>
-          <h3>10.20<span>2010</span></h3>
-          <dl>
-            <dt>���������ں˵�6.0<span>����360�ʻ���ͬ�������ղؼ�</span></dt>
-          </dl>
-        </li>
-        <li>
-          <h3>09.15<span>2010</span></h3>
-          <dl>
-            <dt>����?
-	<span>�׸�����ɳ�䡢ϵͳ����ע�롢��������̸���ܹ��Ȱ�ȫ���Ƶ�˫�������?br><br></span>
-	</dt>
-	<br><br><br><br>
-          </dl>
-        </li>
-      </ul>
-    </div>
-  </div>
+</nav>
+<main>
+<div class="container">
+	<aside></aside>
+	<section></section>
 </div>
 
-<script src="js/jquery.js"></script> 
-<script src="js/main.js"></script>
-<p align="center">�����������IE8��360��FireFox��Chrome��Safari��Opera�����Ρ��ѹ�������֮��. </p>
-<p align="center">��Դ��<a href="http://sc.aigei.com/" target="_blank">վ���ز�</a></p>
+</main>
+<footer>
+<div class="container">
+	<div class="row up">
+		<ul class="list-inline text-center">
+			<li>空间手机版</li>
+			<li>黄钻贵族</li>
+			<li>官方Qzone</li>
+			<li>QQ互联</li>
+			<li>认证服务</li>
+			<li>腾讯博客</li>
+			<li>QQ空间服务协议</li>
+			<li>Complaint Guidelines</li>
+			<li>粤网文献</li>
+		</ul>
+	</div>
+	<div class="row mid">
+		<ul class="list-inline text-center">
+			<li>适用浏览器：360、FireFox、Chrome、Opera、傲游、搜狗、世界之窗. 不支持Safari、IE8及以下浏览器。</li>
+			<li><p>来源：<a href="http://sc.aigei.com/" target="_blank">爱给网</a></p></li>
+		</ul>
+	</div>
+</div>
+</footer>
 </body>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/GetLunarDay.js"></script>
+<script src="js/index.js"></script>
 </html>
