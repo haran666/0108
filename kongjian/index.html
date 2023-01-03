@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<title>❤我与23岁的晴❤</title>
+
+<style> 
+        .img{
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            background-image: url('./goat.gif');
+            background-size: cover;
+        }
+    </style>
+
+
+
+
+</head>
+<body>
+<template>
+<article><i></i>
+	<span class="nular">{{lunar}}</span><b class="secDate">{{date}}</b>
+	<p class="content">"{{content}}"</p>{{img}}
+	<a href="#" title="赞aaa" class="like">（{{like}}人）已赞</a>
+	<a href="#" title="评论" class="comment">（{{comment}}）人已评论</a>
+
+</article>
+</template>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="menu-nav">
+<div class="container">
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<a class="navbar-brand" href="#"><i class="logo"></i></a>
+	</div>
+	<div class="navbar-collapse collapse">
+
+		<ul class="nav navbar-nav">
+			<li class=" one"><i class="ui-center"></i><a href="#">个人中心</a></li>
+			<li class="two"><i class="ui-home"></i><a href="#">我的主页</a></li>
+			<li class="three"><i class="ui-friends"></i><a href="#">好友</a></li>
+			<li class="four"><i class="ui-apply"></i><a href="#">应用</a></li>
+			<li class="five"><i class="ui-dress"></i><a href="#">装扮</a></li>
+			<li class="six"><i class="ui-music"></i><a href="#" class="music-active"></a></li>
+			<li class="seven"> <input type="text" class="form-control" placeholder="用户/应用/动态"><span class="search"></span></li>
+			<li class="eight"><img src="img/touxiang.png" alt="">&nbsp;&nbsp;用&nbsp;户&nbsp;名&nbsp;~&nbsp;~</li>
+		</ul>
+	</div>
+</div>
+</nav>
+<main>
+<div class="container">
+	<aside></aside>
+	<section></section>
+</div>
+
+</main>
+<footer>
+<div class="container">
+	<div class="row up">
+		<ul class="list-inline text-center">
+			<li>空间手机版</li>
+			<li>黄钻贵族</li>
+			<li>官方Qzone</li>
+			<li>QQ互联</li>
+			<li>认证服务</li>
+			<li>腾讯博客</li>
+			<li>QQ空间服务协议</li>
+			<li>Complaint Guidelines</li>
+			<li>粤网文献</li>
+		</ul>
+	</div>
+	<div class="row mid">
+		<ul class="list-inline text-center">
+			<li>送给最爱的晴，希望你每天开心，每天想我</li>
+		</ul>
+	</div>
+</div>
+
+   <div class="img"></div>
+</footer>
+</body>
+
+
+<script>
+        let img = document.querySelector('.img')
+        // 定义小图片的旋转角度
+        let deg = 0
+        // 定义小图片位于网页左侧的位置
+        let imgx = 0
+        // 定义小图片位于网页顶部的位置
+        let imgy = 0
+        // 定义小图片x轴的位置
+        let imgl = 0
+        // 定义小图片y轴的位置
+        let imgt = 0
+        // 定义小图片翻转的角度
+        let y = 0 
+        // 定义一个计数器
+        let index = 0
+
+        window.addEventListener('mousemove',function(xyz){
+            // 获取网页左侧距离的图片位置
+            imgx = xyz.x - img.offsetLeft - img.clientWidth /2
+            // 多去网页顶部距离图片的位置
+            imgy = xyz.y - img.offsetTop - img.clientHeight /2
+            // 套入公式，定义图片的旋转角度
+            deg = 360*Math.atan(imgy/imgx)/(2*Math.PI)
+            // 每当鼠标移动的时候重置index
+            index= 0
+            // 定义当前鼠标的位置
+            let x = event.clientX
+            // 当鼠标的x轴大于图片的时候，提普安就要对着鼠标，所以需要将图片翻转过来
+            // 否则就不用翻转
+            if(img.offsetLeft<x){
+                y=-180
+            }else{
+                y=0
+            }
+        })
+        setInterval(()=>{
+            // 设置小图片的旋转和翻转
+            img.style.transform = "rotateZ("+deg+"deg) rotateY("+y+"deg)"
+            index++
+            // 在这里设置小图片的位置和速度，并判断小图片到达鼠标位置时停止移动
+            if(index<50){
+                imgl+=imgx/50
+                imgt+=imgy/50
+            }
+            img.style.left = imgl+"px"
+            img.style.top = imgt+"px"
+        },10)
+    </script>
+
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/GetLunarDay.js"></script>
+<script src="js/index.js"></script>
+</html>
